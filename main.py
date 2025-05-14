@@ -1,5 +1,5 @@
 # command imports
-from commands import add
+from commands import task
 
 def welcome():
     print("Welcome to the command line Task Tracker!")
@@ -21,7 +21,7 @@ def command_handler(command):
 
     if command == "add":
         content = input("Enter task content: ")
-        add.task(content)
+        task.task(content)
 
     elif command == "update":
         pass
@@ -35,4 +35,4 @@ def command_handler(command):
         pass
 
 if __name__ == "__main__":
-    welcome()       
+    welcome()
