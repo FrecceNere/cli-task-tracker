@@ -17,18 +17,24 @@ def command_handler(command):
         print("")
         print("Available commands:")
         print("add - to add a new task")
+        print("update - to update an existing task")
+        print("delete - to delete an existing task")
         print("")
 
     if command == "add":
         content = input("Enter task content: ")
-        task.task(content)
+        task.add(content)
 
     elif command == "update":
-        pass
+        task_id = input("Enter task ID to update: ")
+        content = input("Enter new task content: ")
+        task.update(task_id, content)
     elif command == "delete":
-        pass
+        task_id = input("Enter task ID to delete: ")
+        task.delete(task_id)
     elif command == "mark-in-progress":
-        pass
+        task_id = print("Enter task ID to mark in progress: ")
+        task.mark_in_progress(task_id)
     elif command == "mark-done":
         pass
     elif command == "list":
